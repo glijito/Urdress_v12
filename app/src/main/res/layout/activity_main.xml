@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/rectangle_73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_73"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+        android:id="@+id/urdress3x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/urdress3x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/usuario_existente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario Existente"
+        android:textColor="#7C95AF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/urdress3x" />
+    <ImageView
+        android:id="@+id/rectangle_74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_74"
+        app:layout_constraintTop_toBottomOf="@+id/usuario_existente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/eTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:ems="12"
+        android:textColorHint="#000"
+        android:textSize="17dp"
+        android:hint="Usuario o Email"
+        android:textColor="#3A4246"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_74"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_74"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_74"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_74" />
+    <ImageView
+        android:id="@+id/rectangle_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_74"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_74"/>
+    <EditText
+        android:id="@+id/eTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:textColorHint="#000"
+        android:textColor="#000"
+        android:ems="12"
+        android:textSize="17dp"
+        android:hint="Contraseña"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_75" />
+    <ImageButton
+        android:id="@+id/group_2356"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/group_2356"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_75" />
+    <TextView
+        android:id="@+id/txtcuentaURD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Crea una cuenta URDress"
+        android:textColor="#697989"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_2356"/>
+    <ImageButton
+        android:id="@+id/imagebtnFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/rectangle_76"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/txtFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar usando Facebook"
+        android:textColor="#FFFF"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebtnFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/imagebtnFacebook"
+        app:layout_constraintStart_toStartOf="@+id/imagebtnFacebook"
+        app:layout_constraintTop_toTopOf="@+id/imagebtnFacebook" />
+    <!--
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+
+    <ImageButton
+        android:id="@+id/imagebtnFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_73"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_73"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_73"
+        app:srcCompat="@mipmap/rectangle_76" />
+
+    <TextView
+        android:id="@+id/txtFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar usando Facebook"
+        android:textColor="#FFFF"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebtnFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/imagebtnFacebook"
+        app:layout_constraintStart_toStartOf="@+id/imagebtnFacebook"
+        app:layout_constraintTop_toTopOf="@+id/imagebtnFacebook" />-->
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro_3"
+    android:background="#27B6EA">
+    <ImageView
+        android:id="@+id/Elipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ellipse_31"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+        android:id="@+id/imgCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/group_2360"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/txtEncontraras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Encontrarás y publicarás contenido
+        en esa localidad"
+        android:textColor="#3A4246"
+        android:gravity="center"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCiudad" />
+    <ImageView
+        android:id="@+id/rectangle_79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/rectangle_79"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEncontraras" />
+    <TextView
+        android:id="@+id/informacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Podrás cambiar más adelante"
+        android:textColor="#7C95AF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_79" />
+    <ImageView
+        android:id="@+id/igCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_57"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacion"/>
+    <EditText
+        android:id="@+id/eTCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ciudad"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColorHint="#7C95AF"
+        android:textColor="#3A4246"
+        android:ems="12"
+        app:layout_constraintBottom_toBottomOf="@+id/igCiudad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/igCiudad" />
+    <ImageButton
+        android:id="@+id/imgSig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/rectangle_61"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tVsig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ir al siguiente paso"
+        android:textSize="20dp"
+        android:textColor="#C2E5F5"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSig"
+        app:layout_constraintEnd_toEndOf="@+id/imgSig"
+        app:layout_constraintStart_toStartOf="@+id/imgSig"
+        app:layout_constraintTop_toTopOf="@+id/imgSig" />
+</android.support.constraint.ConstraintLayout>

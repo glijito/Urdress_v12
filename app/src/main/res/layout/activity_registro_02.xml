@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro_2"
+    android:background="#27B6EA">
+
+    <ImageView
+        android:id="@+id/elipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ellipse_27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+        android:id="@+id/datos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/group_2358"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/disfrutar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Para disfrutar de URDress debes registar tus datos reales."
+        android:textColor="#3A4246"
+        android:gravity="center"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datos" />
+    <ImageView
+        android:id="@+id/rectangle_78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_78"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disfrutar" />
+    <TextView
+        android:id="@+id/informacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Esta información no puede cambiarse"
+        android:textColor="#7C95AF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_78" />
+    <ImageView
+        android:id="@+id/imgnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_57"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacion"/>
+    <EditText
+        android:id="@+id/eTNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Nombre (s)"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColorHint="#7C95AF"
+        android:textColor="#3A4246"
+        android:ems="12"
+        app:layout_constraintBottom_toBottomOf="@+id/imgnombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgnombre" />
+    <ImageView
+        android:id="@+id/imgapaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/rectangle_57"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTNombre" />
+    <EditText
+        android:id="@+id/eTapaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Apellido Paterno"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColorHint="#7C95AF"
+        android:textColor="#3A4246"
+        android:ems="12"
+        app:layout_constraintBottom_toBottomOf="@+id/imgapaterno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgapaterno" />
+    <ImageView
+        android:id="@+id/imgamaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/rectangle_57"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTapaterno" />
+    <EditText
+        android:id="@+id/eTamaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+            android:hint="Apellido Materno"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColorHint="#7C95AF"
+        android:textColor="#3A4246"
+        android:ems="12"
+        app:layout_constraintBottom_toBottomOf="@+id/imgamaterno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgamaterno" />
+    <ImageButton
+        android:id="@+id/imgSig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/rectangle_61"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tVsig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ir al siguiente paso"
+        android:textSize="20dp"
+        android:textColor="#C2E5F5"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSig"
+        app:layout_constraintEnd_toEndOf="@+id/imgSig"
+        app:layout_constraintStart_toStartOf="@+id/imgSig"
+        app:layout_constraintTop_toTopOf="@+id/imgSig" />
+</android.support.constraint.ConstraintLayout>

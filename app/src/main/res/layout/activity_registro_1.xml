@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro_1"
+    android:background="#27B6EA">
+
+    <ImageView
+        android:id="@+id/elipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ellipse_27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/correoe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/group_2359"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/disfrutar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Para disfrutar de URDress debes registar
+        tus datos reales."
+        android:textColor="#3A4246"
+        android:gravity="center"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoe" />
+
+    <ImageView
+        android:id="@+id/rectangle_77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/rectangle_77"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disfrutar" />
+
+    <TextView
+        android:id="@+id/escribe_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Escribe tu dirección de correo electrónico"
+        android:textColor="#7C95AF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_77" />
+
+    <ImageView
+        android:id="@+id/imgcorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/rectangle_57"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escribe_correo" />
+
+    <EditText
+        android:id="@+id/eTCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Correo Electrónico"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColorHint="#3A4246"
+        android:textColor="#3A4246"
+        android:ems="12"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/imgcorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgcorreo" />
+
+    <ImageButton
+        android:id="@+id/imgBrectangle_61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/rectangle_61"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tVsiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ir al siguiente paso"
+        android:textSize="20dp"
+        android:textColor="#C2E5F5"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBrectangle_61"
+        app:layout_constraintEnd_toEndOf="@+id/imgBrectangle_61"
+        app:layout_constraintStart_toStartOf="@+id/imgBrectangle_61"
+        app:layout_constraintTop_toTopOf="@+id/imgBrectangle_61" />
+</android.support.constraint.ConstraintLayout>
