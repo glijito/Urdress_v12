@@ -39,12 +39,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*
         SegundoPlano tarea = new SegundoPlano();
         tarea.execute();
-        */
-
-
     }
 
 
@@ -101,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
          String NAMESPACE = "http://drees.siidmex.com.mx/wsAppDress.asmx/";
          String MAIN_REQUEST_URL = "http://drees.siidmex.com.mx/wsAppDress.asmx";
          String SOAP_ACTION = "http://tempuri.org/loguin";
-         SoapPrimitive resultsString;
+         SoapObject resultsString;
 
         try{
             SoapObject request = new SoapObject(NAMESPACE, METHODNAME);
@@ -123,10 +119,11 @@ public class MainActivity extends AppCompatActivity {
             HttpTransportSE transport= getHttpTransportSE();
 
             transport.call(SOAP_ACTION,soapEnvelope);
-            resultsString=(SoapPrimitive) soapEnvelope.getResponse();
-            int Idusuario = Integer.parseInt(resultsString.getAttributeAsString("IdUsuario"));
-            Toast.makeText(this,"xDDDD", Toast.LENGTH_LONG).show();
-            Toast.makeText(this,"SUPER CHIDO :V "+Idusuario, Toast.LENGTH_LONG).show();
+
+            resultsString= (SoapObject) soapEnvelope.getResponse();
+            String mensajeSoap = resultsString.getPrimitivePropertyAsString("Mensaje");
+
+            Toast.makeText(this,"Resultado: "+mensajeSoap, Toast.LENGTH_LONG).show();
         }catch(Exception e){
             Log.e("Error ","Problema: "+e.getMessage());
         }
