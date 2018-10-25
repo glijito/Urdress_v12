@@ -42,10 +42,6 @@ public class MainActivity extends AppCompatActivity {
         SegundoPlano tarea = new SegundoPlano();
         tarea.execute();
     }
-
-
-
-
         /*AltaUsuario alta = retrofit.create(AltaUsuario.class);
         Call<Resp> usuarioCall = alta.getUsu(1,"maeeaahh@gmail.com", "marhjaaakhcgaaa",
                 "xd","xd","xd","xd", "cf",
@@ -74,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
     }
     }*/
 
-
     private class SegundoPlano extends AsyncTask<Void,Void,Void> {
 
         @Override
@@ -95,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
     private void loguinUsuario (){
          String METHODNAME="loguin";
          String NAMESPACE = "http://drees.siidmex.com.mx/wsAppDress.asmx/";
-         String MAIN_REQUEST_URL = "http://drees.siidmex.com.mx/wsAppDress.asmx";
          String SOAP_ACTION = "http://tempuri.org/loguin";
          SoapObject resultsString;
 
