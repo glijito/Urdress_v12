@@ -63,14 +63,14 @@ public class DressApiService extends AsyncTask<String,Integer,Boolean> {
         String METHODNAME = "loguin";
         String SOAP_ACTION = "http://tempuri.org/loguin";
         String NAMESPACE = "http://tempuri.org/";
+        SoapObject resultsString;
 
         try {
             SoapObject request = new SoapObject(NAMESPACE, METHODNAME);
             request.addProperty("contrasenia", Contrasenia);
             request.addProperty("dato", Dato);
             request.addProperty("esFacebook", esFacebook);
-            request.addProp       SoapObject resultsString;
-erty("idTipoDispositivo", 3);
+            request.addProperty("idTipoDispositivo", 3);
             request.addProperty("idTipoLoguin", 1);
             request.addProperty("idTipoUsuario", TipoUsuario);
             request.addProperty("tokenDispositivo", "xdd");
