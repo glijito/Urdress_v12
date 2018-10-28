@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap.DressLoguin;
 import com.example.xdd.urdress_v1.R;
 
-public class Activity_main extends AppCompatActivity {
+public class InicioSesion extends AppCompatActivity {
 
     private SharedPreferences prefs;
 
@@ -27,7 +27,7 @@ public class Activity_main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_InicioSesion);
 
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         checarInicio();

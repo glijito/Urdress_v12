@@ -4,9 +4,8 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.WindowManager;
 
-import com.example.xdd.urdress_v1.ApiDressWeb.Activitys.Activity_main;
+import com.example.xdd.urdress_v1.ApiDressWeb.Activitys.InicioSesion;
 import com.example.xdd.urdress_v1.R;
 
 public class Splash extends AppCompatActivity {
@@ -20,7 +19,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             public void run(){
                 // Cuando pasen los 3 segundos, pasamos a la actividad principal de la aplicación
-                Intent intent = new Intent(Splash.this, Activity_main.class);
+                Intent intent = new Intent(Splash.this, InicioSesion.class);
                 startActivity(intent);
                 finish();
             };
