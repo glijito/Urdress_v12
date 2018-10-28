@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap.DressApiService;
+import com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap.DressLoguin;
 import com.example.xdd.urdress_v1.R;
 
 public class Activity_main extends AppCompatActivity {
@@ -22,17 +22,20 @@ public class Activity_main extends AppCompatActivity {
     private EditText Email;
     private EditText Password;
     private ImageButton Entrar;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        checarInicio();
+
         Email = (EditText) findViewById(R.id.eTextEmail);
         Password = (EditText) findViewById(R.id.eTextPassword);
         Entrar = (ImageButton) findViewById(R.id.group_2356);
 
-        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         setCredentialsIfExist();
 
         Entrar.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +45,19 @@ public class Activity_main extends AppCompatActivity {
                 String textoPassword = Password.getText().toString();
 
                 if(login(textoEmail, textoPassword)){
-                    new DressApiService(getApplication(),textoPassword,textoEmail, false, 3).execute();
-                    //goToMain();
-                    //saveOnPreferences(textoEmail, textoPassword);
+                    DressLoguin dressLoguin =new DressLoguin(getApplication(),textoPassword,textoEmail, false, 3);
+                    dressLoguin.execute();
+                    try {
+                        id=Integer.parseInt(dressLoguin.get().toString());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    if(id>0){
+                        goToMain();
+                        saveOnPreferences(textoEmail, textoPassword);
+                    }else
+                        Toast.makeText(getApplicationContext(), "Correo y/o Contraseña Erronea",Toast.LENGTH_LONG).show();
+
                 }
             }
         });
@@ -85,6 +98,7 @@ public class Activity_main extends AppCompatActivity {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("email", email);
             editor.putString("pass", password);
+            editor.putString("id", String.valueOf(id));
             editor.apply();
     }
     private void goToMain() {
@@ -93,4 +107,8 @@ public class Activity_main extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void checarInicio(){
+        if(Integer.parseInt(prefs.getString("id", "0"))>0)
+            goToMain();
+    }
 }

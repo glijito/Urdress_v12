@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
@@ -12,7 +11,7 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
 
-public class DressApiService extends AsyncTask<String,Integer,Boolean> {
+public class DressLoguin extends AsyncTask<String,Integer,Integer> {
 
     private SharedPreferences prefs;
     private String Mensaje;
@@ -27,7 +26,7 @@ public class DressApiService extends AsyncTask<String,Integer,Boolean> {
     private int TipoUsuario;
 
 
-    public DressApiService(String mensajeSoap, boolean result, Application context, String contrasenia, String dato, boolean esFacebook, int tipoUsuario) {
+    public DressLoguin(String mensajeSoap, boolean result, Application context, String contrasenia, String dato, boolean esFacebook, int tipoUsuario) {
         this.Mensaje = mensajeSoap;
         this.result = result;
         this.context = context;
@@ -38,23 +37,19 @@ public class DressApiService extends AsyncTask<String,Integer,Boolean> {
 
     }
 
-    public DressApiService(Application context,String contrasenia, String dato, boolean esFacebook, int tipoUsuario) {
+    public DressLoguin(Application context, String contrasenia, String dato, boolean esFacebook, int tipoUsuario) {
         this(null, true, context, contrasenia, dato, esFacebook, tipoUsuario);
     }
 
     @Override
-    protected Boolean doInBackground(String... strings) {
+    protected Integer doInBackground(String... strings) {
         loguinUsuario();
-        return result;
+        return id;
     }
 
     @Override
-    protected void onPostExecute(Boolean aBoolean) {
-        if (aBoolean) {
-            Toast.makeText(context, "Resultado: " + id, Toast.LENGTH_LONG).show();
-
-        } else
-            Toast.makeText(context, "Error al obtener el dato, revise", Toast.LENGTH_LONG).show();
+    protected void onPostExecute(Integer integer) {
+        super.onPostExecute(integer);
     }
 
     private void loguinUsuario() {

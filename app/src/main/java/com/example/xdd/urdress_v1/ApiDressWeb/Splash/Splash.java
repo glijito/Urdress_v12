@@ -11,7 +11,7 @@ import com.example.xdd.urdress_v1.R;
 
 public class Splash extends AppCompatActivity {
 
-    private final int DURACION_SPLASH = 1000; // 3 segundos
+    private final int DURACION_SPLASH = 3000; // 3 segundos
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
