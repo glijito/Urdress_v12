@@ -5,17 +5,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".SplashActivity.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/icono"
-        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icono"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activitys.MainActivity" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".SplashActivity.SplashActivity"
+            android:name=".ApiDressWeb.Splash.Splash"
             android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,6 +42,8 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+        <activity android:name=".ApiDressWeb.Activitys.Activity_main" />
+        <activity android:name=".ApiDressWeb.Activitys.Inicio"></activity>
     </application>
 
 </manifest>
