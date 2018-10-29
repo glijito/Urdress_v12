@@ -43,7 +43,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ApiDressWeb.Activitys.InicioSesion" />
-        <activity android:name=".ApiDressWeb.Activitys.Inicio"></activity>
+        <activity android:name=".ApiDressWeb.Activitys.Inicio" />
+        <activity android:name=".ApiDressWeb.Activitys.AltaUsuario" />
     </application>
 
 </manifest>

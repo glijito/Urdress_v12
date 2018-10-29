@@ -2,4 +2,11 @@
     <string name="app_name">Urdress_v1</string>
     <string name="facebook_app_id">2177732782471117</string>
     <string name="fb_login_protocol_scheme">fb2177732782471117</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_splash_shido">SplashShido</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

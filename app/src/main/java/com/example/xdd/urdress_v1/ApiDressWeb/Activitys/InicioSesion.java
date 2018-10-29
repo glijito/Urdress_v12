@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap.DressLoguin;
@@ -22,21 +23,29 @@ public class InicioSesion extends AppCompatActivity {
     private EditText Email;
     private EditText Password;
     private ImageButton Entrar;
+    private TextView AltaUsuario;
     private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_InicioSesion);
+        setContentView(R.layout.activity_iniciosesion);
 
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        //Checa si esta iniciada la sesion
         checarInicio();
 
         Email = (EditText) findViewById(R.id.eTextEmail);
         Password = (EditText) findViewById(R.id.eTextPassword);
         Entrar = (ImageButton) findViewById(R.id.group_2356);
+        AltaUsuario = (TextView) findViewById(R.id.txtcuentaURD);
 
-        setCredentialsIfExist();
+        AltaUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToAltaUsuario();
+            }
+        });
 
         Entrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,16 +85,6 @@ public class InicioSesion extends AppCompatActivity {
         }
     }
 
-    private void setCredentialsIfExist() {
-        String email = prefs.getString("email", "");
-        String password = prefs.getString("pass", "");
-        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-            Email.setText(email);
-            Password.setText(password);
-        }
-    }
-
-
     private boolean isValidEmail(String email) {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
@@ -103,6 +102,12 @@ public class InicioSesion extends AppCompatActivity {
     }
     private void goToMain() {
         Intent intent = new Intent(this, Inicio.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    private void goToAltaUsuario(){
+        Intent intent = new Intent(this, AltaUsuario.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }

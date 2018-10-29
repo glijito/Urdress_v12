@@ -18,7 +18,7 @@ public class Inicio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio);
+        setContentView(R.layout.activityinicio);
 
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         btnCerrarSesion = (Button) findViewById(R.id.btnCerrarSesion);
