@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.MainActivity"
+    tools:context=".ApiDressWeb.Activitys.InicioSesion"
     android:background="@color/colorPrimary">
 
     <ImageView
@@ -120,34 +120,13 @@
         app:layout_constraintEnd_toEndOf="@+id/imagebtnFacebook"
         app:layout_constraintStart_toStartOf="@+id/imagebtnFacebook"
         app:layout_constraintTop_toTopOf="@+id/imagebtnFacebook" />
-    <!--
+
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
+        android:visibility="invisible"
+        android:id="@+id/btnloguinFace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="10dp"
 
-    <ImageButton
-        android:id="@+id/imagebtnFacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_73"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_73"
-        app:layout_constraintTop_toBottomOf="@id/rectangle_73"
-        app:srcCompat="@mipmap/rectangle_76" />
-
-    <TextView
-        android:id="@+id/txtFacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entrar usando Facebook"
-        android:textColor="#FFFF"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imagebtnFacebook"
-        app:layout_constraintEnd_toEndOf="@+id/imagebtnFacebook"
-        app:layout_constraintStart_toStartOf="@+id/imagebtnFacebook"
-        app:layout_constraintTop_toTopOf="@+id/imagebtnFacebook" />-->
+        />
 </android.support.constraint.ConstraintLayout>

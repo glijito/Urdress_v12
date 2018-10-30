@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 
 import com.example.xdd.urdress_v1.ApiDressWeb.Activitys.Inicio;
 import com.example.xdd.urdress_v1.ApiDressWeb.Splash.Splash;
+import com.facebook.login.LoginManager;
 
 public class CerrarSesion {
     private SharedPreferences prefs;
@@ -17,6 +18,7 @@ public class CerrarSesion {
     }
 
     public void Cerrar(){
+        LoginManager.getInstance().logOut();
         deleteOnPreferences();
         goToSplash();
     }
