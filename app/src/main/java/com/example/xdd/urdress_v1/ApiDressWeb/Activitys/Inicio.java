@@ -24,7 +24,6 @@ public class Inicio extends AppCompatActivity implements FragmentInicio.DataList
         setContentView(R.layout.activityinicio);
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
 
-
         FragmentInicio fr = new FragmentInicio();
         Fragment ff = (Fragment) fr;
         setFragment(ff, "fragment_inicio");
