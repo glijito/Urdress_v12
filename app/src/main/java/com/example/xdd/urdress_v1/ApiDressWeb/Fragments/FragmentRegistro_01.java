@@ -28,7 +28,6 @@ public class FragmentRegistro_01 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -55,9 +54,6 @@ public class FragmentRegistro_01 extends Fragment {
                 }
             }
         });
-
-
-
         return view;
     }
 

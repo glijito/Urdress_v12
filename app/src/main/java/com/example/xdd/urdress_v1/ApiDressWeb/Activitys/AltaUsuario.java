@@ -32,7 +32,6 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
     private String ApeidoM;
     private String Ciudad;
     private String Telefono;
-
     private int id;
 
     @Override
@@ -43,10 +42,8 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
 
         FragmentRegistro_01 fr = new FragmentRegistro_01();
-
         Fragment ff = (Fragment) fr;
         setFragment(ff, "fragment_registro_01");
-
     }
     public void setFragment(Fragment newFragment, String tag){
         int commit = getFragmentManager().beginTransaction().replace(R.id.contenedor,newFragment,tag).
