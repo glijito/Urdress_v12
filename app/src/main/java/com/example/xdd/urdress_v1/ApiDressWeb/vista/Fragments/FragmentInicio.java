@@ -1,15 +1,13 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Fragments;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.xdd.urdress_v1.R;
 
@@ -32,9 +30,9 @@ public class FragmentInicio extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment__inicio, container, false);
-        btnCerrarSesion = (Button) view.findViewById(R.id.btnCerrarSesion);
-        btnPerfil = (Button) view.findViewById(R.id.btnPerfil);
-        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+        //btnCerrarSesion = (Button) view.findViewById(R.id.btnCerrarSesion);
+        //btnPerfil = (Button) view.findViewById(R.id.btnPerfil);
+        /*btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 callback.sendDataInicio(false);
@@ -45,7 +43,7 @@ public class FragmentInicio extends Fragment {
             public void onClick(View v) {
                 callback.sendDataInicio(true);
             }
-        });
+        });*/
         return view;
     }
 
@@ -57,7 +55,6 @@ public class FragmentInicio extends Fragment {
         } catch (Exception e) {
             throw new ClassCastException(context.toString() + " should implement DataListener");
         }
-
     }
 
     @Override

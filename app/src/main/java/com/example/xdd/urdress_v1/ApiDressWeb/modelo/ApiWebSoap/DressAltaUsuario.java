@@ -1,11 +1,9 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap;
+package com.example.xdd.urdress_v1.ApiDressWeb.modelo.ApiWebSoap;
 
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;

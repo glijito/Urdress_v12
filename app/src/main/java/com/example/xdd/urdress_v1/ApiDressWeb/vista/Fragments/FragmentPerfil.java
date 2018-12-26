@@ -1,4 +1,4 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Fragments;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments;
 
 
 import android.app.Activity;
@@ -81,13 +81,13 @@ public class FragmentPerfil extends Fragment{
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = new MenuInflater(getActivity());
-        inflater.inflate(R.menu.menu_contextual_perfil, menu);
+        //inflater.inflate(R.menu.menu_contextual_perfil, menu);
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.email:
+       // switch (item.getItemId()){
+            /*case R.id.email:
                 Toast.makeText(getActivity(), "Email", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.nummobil:
@@ -102,9 +102,9 @@ public class FragmentPerfil extends Fragment{
             case R.id.eliminar:
                 Toast.makeText(getActivity(), "Eliminar", Toast.LENGTH_SHORT).show();
                 return true;
-            default:
+            default:*/
                 return super.onContextItemSelected(item);
-        }
+     //   }
     }
 
     @Override

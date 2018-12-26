@@ -1,4 +1,4 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap;
+package com.example.xdd.urdress_v1.ApiDressWeb.modelo.ApiWebSoap;
 
 import android.app.Application;
 import android.content.SharedPreferences;

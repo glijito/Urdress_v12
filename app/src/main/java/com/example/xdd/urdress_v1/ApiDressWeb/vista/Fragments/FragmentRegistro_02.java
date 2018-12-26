@@ -1,4 +1,4 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Fragments;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments;
 
 import android.app.Fragment;
 import android.content.Context;

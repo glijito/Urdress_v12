@@ -1,4 +1,4 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Activitys;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Activitys;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -9,13 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap.DressAltaUsuario;
-import com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap.DressLoguin;
-import com.example.xdd.urdress_v1.ApiDressWeb.Fragments.FragmentRegistro_01;
-import com.example.xdd.urdress_v1.ApiDressWeb.Fragments.FragmentRegistro_02;
-import com.example.xdd.urdress_v1.ApiDressWeb.Fragments.FragmentRegistro_03;
-import com.example.xdd.urdress_v1.ApiDressWeb.Fragments.FragmentRegistro_04;
-import com.example.xdd.urdress_v1.ApiDressWeb.Fragments.FragmentRegistro_05;
+import com.example.xdd.urdress_v1.ApiDressWeb.modelo.ApiWebSoap.DressAltaUsuario;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentRegistro_01;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentRegistro_02;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentRegistro_03;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentRegistro_04;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentRegistro_05;
 import com.example.xdd.urdress_v1.R;
 
 public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_01.DataListener,

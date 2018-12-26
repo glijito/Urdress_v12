@@ -1,11 +1,10 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.ApiWebSoap;
+package com.example.xdd.urdress_v1.ApiDressWeb.modelo.ApiWebSoap;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.example.xdd.urdress_v1.ApiDressWeb.Activitys.Inicio;
-import com.example.xdd.urdress_v1.ApiDressWeb.Splash.Splash;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Splash.Splash;
 import com.facebook.login.LoginManager;
 
 public class CerrarSesion {

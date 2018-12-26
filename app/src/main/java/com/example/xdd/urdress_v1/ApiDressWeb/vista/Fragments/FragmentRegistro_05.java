@@ -1,7 +1,6 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Fragments;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.text.TextUtils;
@@ -14,8 +13,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.xdd.urdress_v1.R;
-
-import java.util.regex.Pattern;
 
 public class FragmentRegistro_05 extends Fragment {
 

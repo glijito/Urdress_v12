@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ApiDressWeb.Splash.Splash"
+            android:name=".ApiDressWeb.vista.Splash.Splash"
             android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,9 +42,9 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".ApiDressWeb.Activitys.InicioSesion" />
-        <activity android:name=".ApiDressWeb.Activitys.Inicio" />
-        <activity android:name=".ApiDressWeb.Activitys.AltaUsuario" />
+        <activity android:name=".ApiDressWeb.vista.Activitys.InicioSesion" />
+        <activity android:name=".ApiDressWeb.vista.Activitys.Inicio" />
+        <activity android:name=".ApiDressWeb.vista.Activitys.AltaUsuario" />
     </application>
 
 </manifest>

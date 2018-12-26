@@ -1,11 +1,11 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Splash;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Splash;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.xdd.urdress_v1.ApiDressWeb.Activitys.InicioSesion;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Activitys.InicioSesion;
 import com.example.xdd.urdress_v1.R;
 
 public class Splash extends AppCompatActivity {

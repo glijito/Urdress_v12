@@ -1,20 +1,14 @@
-package com.example.xdd.urdress_v1.ApiDressWeb.Fragments;
+package com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments;
 
 import android.app.Fragment;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.example.xdd.urdress_v1.R;
-
-import static android.app.Activity.RESULT_OK;
 
 
 public class FragmentRegistro_04 extends Fragment {

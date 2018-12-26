@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
-    tools:context=".ApiDressWeb.Fragments.FragmentRegistro_01">
+    tools:context=".ApiDressWeb.vista.Fragments.FragmentRegistro_01">
 
 
     <android.support.constraint.ConstraintLayout
