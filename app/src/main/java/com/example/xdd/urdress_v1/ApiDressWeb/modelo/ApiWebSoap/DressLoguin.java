@@ -53,7 +53,6 @@ public class DressLoguin extends AsyncTask<String,Integer,Integer> {
     }
 
     private void loguinUsuario() {
-
         String MAINURL = "http://drees.siidmex.com.mx/wsAppDress.asmx";
         String METHODNAME = "loguin";
         String SOAP_ACTION = "http://tempuri.org/loguin";
@@ -63,8 +62,8 @@ public class DressLoguin extends AsyncTask<String,Integer,Integer> {
         try {
             SoapObject request = new SoapObject(NAMESPACE, METHODNAME);
             request.addProperty("contrasenia", Contrasenia);
-            request.addProperty("dato", Dato);
             request.addProperty("esFacebook", esFacebook);
+            request.addProperty("dato", Dato);
             request.addProperty("idTipoDispositivo", 3);
             request.addProperty("idTipoLoguin", 1);
             request.addProperty("idTipoUsuario", TipoUsuario);

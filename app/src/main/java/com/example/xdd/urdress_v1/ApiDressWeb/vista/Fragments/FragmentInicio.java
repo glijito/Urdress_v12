@@ -18,7 +18,6 @@ public class FragmentInicio extends Fragment {
     private Button btnPerfil;
 
     public FragmentInicio() {
-        // Required empty public constructor
     }
 
     @Override
@@ -30,20 +29,6 @@ public class FragmentInicio extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment__inicio, container, false);
-        //btnCerrarSesion = (Button) view.findViewById(R.id.btnCerrarSesion);
-        //btnPerfil = (Button) view.findViewById(R.id.btnPerfil);
-        /*btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callback.sendDataInicio(false);
-            }
-        });
-        btnPerfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callback.sendDataInicio(true);
-            }
-        });*/
         return view;
     }
 

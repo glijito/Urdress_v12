@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorInicio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".ApiDressWeb.vista.Activitys.Inicio">
+    android:orientation="vertical"
+    android:background="@color/whiteapp"
+    tools:context=".ApiDressWeb.vista.Fragments.FragmentInicio">
 
-    <FrameLayout
-        android:id="@+id/contenedorInicio"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/group2272"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/urdress3x"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/btn_publicar_vestido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/rectangle82"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtVestidoPublicado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publicar un vestido"
+            android:textColor="#FFFF"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_publicar_vestido"
+            app:layout_constraintEnd_toEndOf="@+id/btn_publicar_vestido"
+            app:layout_constraintStart_toStartOf="@+id/btn_publicar_vestido"
+            app:layout_constraintTop_toTopOf="@+id/btn_publicar_vestido" />
+
+        <ImageButton
+            android:id="@+id/btn_rentar_vestido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/rectangle83"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtRentaVestido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rentar un vestido"
+            android:textColor="#FFFF"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_rentar_vestido"
+            app:layout_constraintEnd_toEndOf="@+id/btn_rentar_vestido"
+            app:layout_constraintStart_toStartOf="@+id/btn_rentar_vestido"
+            app:layout_constraintTop_toTopOf="@+id/btn_rentar_vestido" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

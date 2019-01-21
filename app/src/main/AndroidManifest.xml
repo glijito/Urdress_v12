@@ -45,6 +45,7 @@
         <activity android:name=".ApiDressWeb.vista.Activitys.InicioSesion" />
         <activity android:name=".ApiDressWeb.vista.Activitys.Inicio" />
         <activity android:name=".ApiDressWeb.vista.Activitys.AltaUsuario" />
+        <activity android:name=".ApiDressWeb.vista.Activitys.activity_publicarvestido" />
     </application>
 
 </manifest>
