@@ -53,15 +53,7 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
             Log.w("CREACION","incorrecto");
     }
 
-    @Override
-    public void sendDataFR1(String text, String Password) {
-        this.Correo=text;
-        this.Password=Password;
-        FragmentRegistro_02 fr = new FragmentRegistro_02();
-        Fragment ff = (Fragment) fr;
-        setFragment(ff, "fragment_registro_02");
-        Toast.makeText(this, "Password: "+this.Password, Toast.LENGTH_LONG).show();
-    }
+
 
     @Override
     public void sendDataFR2(String Nombre, String ApeidoP, String ApeidoM) {
@@ -123,5 +115,15 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         editor.putString("pass", Password);
         editor.putString("id", String.valueOf(id));
         editor.apply();
+    }
+
+    @Override
+    public void sendFR1(String text, String Password) {
+        this.Correo=text;
+        this.Password=Password;
+        FragmentRegistro_02 fr = new FragmentRegistro_02();
+        Fragment ff = (Fragment) fr;
+        setFragment(ff, "fragment_registro_02");
+        Toast.makeText(this, "Password: "+this.Password, Toast.LENGTH_LONG).show();
     }
 }

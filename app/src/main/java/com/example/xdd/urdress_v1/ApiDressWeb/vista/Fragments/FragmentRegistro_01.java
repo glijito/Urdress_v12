@@ -35,6 +35,12 @@ public class FragmentRegistro_01 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_registro_01, container, false);
 
+        try {
+            callback = (DataListener) getActivity();
+        } catch (Exception e) {
+            throw new ClassCastException(getActivity().toString() + " should implement DataListener");
+        }
+
         txtEmail = (EditText) view.findViewById(R.id.eTCorreo);
         txtPassword = (EditText) view.findViewById(R.id.eTContra);
         btnSiguiente = (ImageButton) view.findViewById(R.id.imgBrectangle_61);
@@ -49,9 +55,8 @@ public class FragmentRegistro_01 extends Fragment {
                     Toast.makeText(getActivity(), "El email no es valido", Toast.LENGTH_LONG).show();
                 else if(!isValidPassword(Password))
                     Toast.makeText(getActivity(), "La contraseña no es valida", Toast.LENGTH_LONG).show();
-                else{
-                    callback.sendDataFR1(Email, Password);
-                }
+                else
+                        callback.sendFR1(Email,Password);
             }
         });
         return view;
@@ -67,14 +72,14 @@ public class FragmentRegistro_01 extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        try {
+        /*try {
             callback = (DataListener) context;
         } catch (Exception e) {
             throw new ClassCastException(context.toString() + " should implement DataListener");
-        }
+        }*/
     }
 
     public interface DataListener {
-        void sendDataFR1(String text, String Password);
+        void sendFR1(String text, String Password);
     }
 }

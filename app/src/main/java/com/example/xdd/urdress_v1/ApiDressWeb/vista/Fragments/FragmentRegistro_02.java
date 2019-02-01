@@ -38,6 +38,12 @@ public class FragmentRegistro_02 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_registro_02, container, false);
 
+        try {
+            callback = (FragmentRegistro_02.DataListener) getActivity();
+        } catch (Exception e) {
+            throw new ClassCastException(getActivity().toString() + " should implement DataListener");
+        }
+
         eTNombre = (EditText) view.findViewById(R.id.eTNombre);
         eTapaterno = (EditText) view.findViewById(R.id.eTapaterno);
         eTamaterno = (EditText) view.findViewById(R.id.eTamaterno);
@@ -66,11 +72,7 @@ public class FragmentRegistro_02 extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        try {
-            callback = (FragmentRegistro_02.DataListener) context;
-        } catch (Exception e) {
-            throw new ClassCastException(context.toString() + " should implement DataListener");
-        }
+
     }
 
     public interface DataListener {

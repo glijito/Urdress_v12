@@ -31,6 +31,12 @@ public class FragmentRegistro_04 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_registro_04, container, false);
         Foto = (ImageButton) view.findViewById(R.id.Foto);
 
+        try {
+            callback = (FragmentRegistro_04.DataListener) getActivity();
+        } catch (Exception e) {
+            throw new ClassCastException(getActivity().toString() + " should implement DataListener");
+        }
+
         Foto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,11 +50,7 @@ public class FragmentRegistro_04 extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        try {
-            callback = (FragmentRegistro_04.DataListener) context;
-        } catch (Exception e) {
-            throw new ClassCastException(context.toString() + " should implement DataListener");
-        }
+
     }
 
     public interface DataListener {

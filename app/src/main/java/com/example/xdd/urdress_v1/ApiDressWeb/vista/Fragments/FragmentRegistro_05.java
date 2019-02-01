@@ -12,7 +12,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.xdd.urdress_v1.ApiDressWeb.modelo.ApiWebSoap.MyVerificationListener;
 import com.example.xdd.urdress_v1.R;
+import com.sinch.verification.Config;
+import com.sinch.verification.SinchVerification;
+import com.sinch.verification.Verification;
+import com.sinch.verification.VerificationListener;
 
 public class FragmentRegistro_05 extends Fragment {
 
@@ -34,6 +39,12 @@ public class FragmentRegistro_05 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_registro_05, container, false);
 
+        try {
+            callback = (FragmentRegistro_05.DataListener) getActivity();
+        } catch (Exception e) {
+            throw new ClassCastException(getActivity().toString() + " should implement DataListener");
+        }
+
         Telefono = (EditText) view.findViewById(R.id.eTelefono);
         Terminar = (ImageButton) view.findViewById(R.id.ibFinalizar);
 
@@ -44,11 +55,23 @@ public class FragmentRegistro_05 extends Fragment {
                 if(!isValidPhone(Numero))
                     Toast.makeText(getActivity(),"Inserte un telefono valido", Toast.LENGTH_LONG).show();
                 else
-                    callback.sendDataFR5(Numero);
+                    startVerification(Numero);
             }
         });
 
         return view;
+
+    }
+
+    private void startVerification(String phoneNumber){
+        String telefono="+52"+phoneNumber;
+        String resultado=null;
+        Config config = SinchVerification.config().applicationKey("645161d2-7154-46a8-8ab2-6954dad7bdf5").context(getActivity()).build();
+        VerificationListener listener = new MyVerificationListener(getActivity());
+        Verification verification = SinchVerification.createFlashCallVerification(config, telefono, resultado, listener);
+        verification.initiate();
+
+        Toast.makeText(getActivity(), resultado,Toast.LENGTH_LONG).show();
     }
 
     private boolean isValidPhone(String Numero){
@@ -58,12 +81,8 @@ public class FragmentRegistro_05 extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        try {
-            callback = (FragmentRegistro_05.DataListener) context;
-        } catch (Exception e) {
-            throw new ClassCastException(context.toString() + " should implement DataListener");
-        }
     }
+
 
     public interface DataListener {
         void sendDataFR5(String numero);
