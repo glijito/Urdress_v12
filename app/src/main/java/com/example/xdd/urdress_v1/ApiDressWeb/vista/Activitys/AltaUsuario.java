@@ -63,7 +63,6 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         FragmentRegistro_03 fr = new FragmentRegistro_03();
         Fragment ff = (Fragment) fr;
         setFragment(ff, "fragment_registro_03");
-        Toast.makeText(this, "Nombre: "+this.Nombre, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -72,7 +71,6 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         FragmentRegistro_04 fr = new FragmentRegistro_04();
         Fragment ff = (Fragment) fr;
         setFragment(ff, "fragment_registro_04");
-        Toast.makeText(this, "Ciudad: "+this.Ciudad, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -80,7 +78,6 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         FragmentRegistro_05 fr = new FragmentRegistro_05();
         Fragment ff = (Fragment) fr;
         setFragment(ff, "fragment_registro_05");
-        Toast.makeText(this, "Foto: "+Foto, Toast.LENGTH_LONG).show();
     }
 
 
@@ -96,12 +93,17 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         }catch (Exception e){
             e.printStackTrace();
         }
-        Toast.makeText(getApplicationContext(), "Id: "+id,Toast.LENGTH_LONG).show();
         if(id>0){
+            Toast.makeText(getApplicationContext(), "Usuario creado correctamente",Toast.LENGTH_LONG).show();
             goToMain();
             saveOnPreferences();
-        }else
+        }else{
             Toast.makeText(getApplicationContext(), "El correo ya esta registrado",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, InicioSesion.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+
     }
 
     private void goToMain(){
@@ -124,6 +126,5 @@ public class AltaUsuario extends AppCompatActivity implements FragmentRegistro_0
         FragmentRegistro_02 fr = new FragmentRegistro_02();
         Fragment ff = (Fragment) fr;
         setFragment(ff, "fragment_registro_02");
-        Toast.makeText(this, "Password: "+this.Password, Toast.LENGTH_LONG).show();
     }
 }

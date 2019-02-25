@@ -84,6 +84,73 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imgCelular" />
 
+        <ImageView
+            android:id="@+id/rectangle_108_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/rectangle_108"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtComenzar" />
+        <TextView
+            android:id="@+id/txtMovil_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ingresa tu codigo de verificacion"
+            android:textColor="#7C95AF"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_108_" />
+        <ImageView
+            android:id="@+id/imgCelular_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/rectangle_57"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMovil_"/>
+        <EditText
+            android:id="@+id/Codigover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="5555"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColorHint="#7C95AF"
+            android:textColor="#3A4246"
+            android:ems="12"
+            android:inputType="phone"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCelular_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgCelular_" />
+
+        <ImageButton
+            android:id="@+id/Codigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/rectangle_61"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/Verificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verificar"
+            android:textSize="20dp"
+            android:textColor="#C2E5F5"
+            app:layout_constraintBottom_toBottomOf="@+id/Codigo"
+            app:layout_constraintEnd_toEndOf="@+id/Codigo"
+            app:layout_constraintStart_toStartOf="@+id/Codigo"
+            app:layout_constraintTop_toTopOf="@+id/Codigo" />
+
         <ImageButton
             android:id="@+id/ibFinalizar"
             android:layout_width="wrap_content"
