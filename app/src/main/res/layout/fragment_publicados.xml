@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context=".ApiDressWeb.vista.Fragments.FragmentPublicados">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/misPubli"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#7C95AF"
+            android:text="Mis publicaciones"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#7C95AF"
+            android:text="Atrás"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/misPubli"
+            app:layout_constraintStart_toStartOf="@+id/misPubli"
+            app:layout_constraintTop_toTopOf="@+id/misPubli"/>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>
