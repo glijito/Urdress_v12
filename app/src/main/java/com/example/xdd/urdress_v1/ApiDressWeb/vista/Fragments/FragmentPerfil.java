@@ -21,7 +21,7 @@ import com.example.xdd.urdress_v1.R;
 
 public class FragmentPerfil extends Fragment{
 
-    private DataListener callback;
+    private DataListeners callback;
     private Button btnDesliza;
     private ImageButton menuContextual;
     private GestureDetector gestureDetector;
@@ -38,7 +38,14 @@ public class FragmentPerfil extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        try {
+            this.callback = (DataListeners) getActivity();
+        } catch (Exception e) {
+            throw new ClassCastException(getActivity().toString() + " should implement DataListener");
+        }
+
+
         btnDesliza = (Button) view.findViewById(R.id.desliza);
         menuContextual = (ImageButton) view.findViewById(R.id.opciones);
         final GestureDetector gesture = new GestureDetector(getActivity(), new GestureDetector.SimpleOnGestureListener(){
@@ -49,7 +56,7 @@ public class FragmentPerfil extends Fragment{
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
                 if (e1.getY()-e2.getY()<-350){
-                    callback.sendDataPer();
+                    callback.sendPerfil("Inicio");
                 }
                 return super.onFling(e1, e2, velocityX, velocityY);
             }
@@ -57,7 +64,7 @@ public class FragmentPerfil extends Fragment{
         btnDesliza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callback.sendDataPer();
+                callback.sendPerfil("Inicio");
             }
         });
         registerForContextMenu(menuContextual);
@@ -111,24 +118,14 @@ public class FragmentPerfil extends Fragment{
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
-            callback = (DataListener) context;
+            this.callback = (DataListeners) getActivity();
         } catch (Exception e) {
-            throw new ClassCastException(context.toString() + " should implement DataListener");
+            throw new ClassCastException(getActivity().toString() + " should implement DataListener");
         }
     }
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            callback = (DataListener) activity;
-        } catch (Exception e) {
-            throw new ClassCastException(activity.toString() + " should implement DataListener");
-        }
-    }
-
-    public interface DataListener {
-        void sendDataPer();
+    public interface DataListeners {
+        void sendPerfil(String Dato);
     }
 
 }

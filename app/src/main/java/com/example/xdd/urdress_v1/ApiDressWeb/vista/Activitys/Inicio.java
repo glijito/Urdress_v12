@@ -1,77 +1,78 @@
 package com.example.xdd.urdress_v1.ApiDressWeb.vista.Activitys;
 
-import android.content.Intent;
+import android.app.Fragment;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.Toast;
 
-import com.example.xdd.urdress_v1.ApiDressWeb.interfaces.Contrato;
-import com.example.xdd.urdress_v1.ApiDressWeb.presentador.desencadenadores.TrigerDatosService;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentInicio;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentMenu;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentPerfil;
 import com.example.xdd.urdress_v1.R;
 
-public class Inicio extends AppCompatActivity implements Contrato.VistaActivity,View.OnClickListener {
+public class Inicio extends AppCompatActivity implements FragmentInicio.DataListener,
+        FragmentMenu.DataListener,
+        FragmentPerfil.DataListeners {
 
     private SharedPreferences prefs;
-    private TrigerDatosService triger;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activityinicio);
-        ImageButton publicarVestido=findViewById(R.id.btn_publicar_vestido);
-        ImageButton rentarVestido=findViewById(R.id.btn_rentar_vestido);
+        setContentView(R.layout.activity_inicio);
 
-        triger = new TrigerDatosService();
-        triger.setVista(this);
+        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
 
-        publicarVestido.setOnClickListener(this);
-        rentarVestido.setOnClickListener(this);
+        FragmentInicio fr = new FragmentInicio();
+        Fragment ff = (Fragment) fr;
+        setFragment(ff, "fragment_inicio");
     }
 
-    @Override
-    public void setConexionErrorUser(String mensaje) {
-        Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void setLoadButtonsActivitys(String opcion){
-        Intent intent =new Intent(this,opcion.getClass());
-        startActivity(intent);
-    }
-
-    @Override
-    public void setMenuUser() {
-
-    }
-
-    @Override
-    public void setRecyclerViewDressInit() {
-        triger.getDataConectedWebDress();
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(v.getId()==R.id.btn_publicar_vestido)
-            setLoadButtonsActivitys("activity_publicarvestido");
-
-        /*if(v.getId()==R.id.btn_rentar_vestido)
-            setLoadButtonsActivitys("mundo");*/
-    }
-
-    public void setFragment(android.support.v4.app.Fragment newFragment, String tag) {
-        int commit= newFragment.getFragmentManager().beginTransaction()
-                .replace(R.id.contenedorInicio, newFragment, tag)
-                .commit();
-
-        if (commit > 0)
-            Log.w("CREACION", "correcto");
+    public void setFragment(Fragment newFragment, String tag){
+        int commit = getFragmentManager().beginTransaction().replace(R.id.contenedor,newFragment,tag).commit();
+        if(commit>0)
+            Log.w("CREACION","correcto");
         else
-            Log.w("CREACION", "incorrecto");
+            Log.w("CREACION","incorrecto");
     }
 
+    @Override
+    public void sendInicio(String fragmento) {
+        if(fragmento=="menu"){
+            FragmentMenu fr = new FragmentMenu();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_menu");
+        }
+
+    }
+
+    @Override
+    public void sendMenu(String fragmento) {
+        if(fragmento=="Perfil"){
+            FragmentPerfil fr = new FragmentPerfil();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_perfil");
+        }else if(fragmento=="Publicados"){
+
+        }else if(fragmento=="Rentados"){
+
+        }else if(fragmento=="Terminos"){
+
+        }else if(fragmento=="AcercaDe"){
+
+        }
+    }
+
+    @Override
+    public void sendPerfil(String Dato) {
+        if(Dato=="Inicio"){
+            FragmentInicio fr = new FragmentInicio();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_inicio");
+        }
+    }
 }
 
