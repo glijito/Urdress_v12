@@ -1,12 +1,12 @@
 package com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments;
 
-
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.xdd.urdress_v1.R;
@@ -19,6 +19,7 @@ public class FragmentMenu extends Fragment {
     private TextView Rentados;
     private TextView Terminos;
     private TextView AcercaDe;
+    private ImageView Cerrar;
 
     public FragmentMenu() {
         // Required empty public constructor
@@ -31,7 +32,7 @@ public class FragmentMenu extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment__menu, container, false);
         try {
@@ -45,6 +46,7 @@ public class FragmentMenu extends Fragment {
         Rentados = (TextView) view.findViewById(R.id.rentados);
         Terminos = (TextView) view.findViewById(R.id.terminos);
         AcercaDe = (TextView) view.findViewById(R.id.acerca);
+        Cerrar = (ImageView) view.findViewById(R.id.Cerrar);
 
         Perfil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +76,12 @@ public class FragmentMenu extends Fragment {
             @Override
             public void onClick(View v) {
                 callback.sendMenu("AcercaDe");
+            }
+        });
+        Cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callback.sendMenu("Cerrar");
             }
         });
         return view;

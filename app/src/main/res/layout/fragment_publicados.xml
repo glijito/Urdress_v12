@@ -18,20 +18,47 @@
             android:text="Mis publicaciones"
             android:textColor="#FFFFFF"
             android:textSize="17dp" />
+
         <Button
+            android:id="@+id/atras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#7C95AF"
             android:text="Atrás"
             android:textColor="#FFFFFF"
             android:textSize="14dp"
-            app:layout_constraintBottom_toBottomOf="@+id/misPubli"
-            app:layout_constraintStart_toStartOf="@+id/misPubli"
-            app:layout_constraintTop_toTopOf="@+id/misPubli"/>
-
+            tools:layout_editor_absoluteY="16dp" />
 
 
     </android.support.constraint.ConstraintLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="80dp">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="0,1">
+            <TableRow>
+                <Button
+                    android:id="@+id/btnReservados"
+                    android:layout_height="wrap_content"
+                    android:background="#83919E"
+                    android:textColor="#EBF4F8"
+                    android:textSize="14dp"
+                    android:text="Reservados y rentando"/>
+                <Button
+                    android:id="@+id/btnPendientes"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="#EBF4F8"
+                    android:text="Pendientes de entrega"
+                    android:background="#697989"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 
 </FrameLayout>

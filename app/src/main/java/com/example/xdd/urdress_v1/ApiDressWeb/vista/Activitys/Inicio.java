@@ -10,11 +10,13 @@ import android.util.Log;
 import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentInicio;
 import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentMenu;
 import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentPerfil;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentPublicados;
 import com.example.xdd.urdress_v1.R;
 
 public class Inicio extends AppCompatActivity implements FragmentInicio.DataListener,
         FragmentMenu.DataListener,
-        FragmentPerfil.DataListeners {
+        FragmentPerfil.DataListeners,
+        FragmentPublicados.DataListeres {
 
     private SharedPreferences prefs;
     private int id;
@@ -56,19 +58,34 @@ public class Inicio extends AppCompatActivity implements FragmentInicio.DataList
             Fragment ff = (Fragment) fr;
             setFragment(ff, "fragment_perfil");
         }else if(fragmento=="Publicados"){
-
+            FragmentPublicados fr = new FragmentPublicados();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_publicados");
         }else if(fragmento=="Rentados"){
 
         }else if(fragmento=="Terminos"){
 
         }else if(fragmento=="AcercaDe"){
 
+        }else if(fragmento=="Cerrar"){
+            FragmentInicio fr = new FragmentInicio();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_inicio");
         }
     }
 
     @Override
     public void sendPerfil(String Dato) {
         if(Dato=="Inicio"){
+            FragmentInicio fr = new FragmentInicio();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_inicio");
+        }
+    }
+
+    @Override
+    public void sendPublicados(String fragmento) {
+        if(fragmento=="Atras"){
             FragmentInicio fr = new FragmentInicio();
             Fragment ff = (Fragment) fr;
             setFragment(ff, "fragment_inicio");
