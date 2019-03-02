@@ -2,6 +2,7 @@ package com.example.xdd.urdress_v1.ApiDressWeb.vista.Activitys;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,8 +50,10 @@ public class Inicio extends AppCompatActivity implements FragmentInicio.DataList
             FragmentMenu fr = new FragmentMenu();
             Fragment ff = (Fragment) fr;
             setFragment(ff, "fragment_menu");
+        }else if(fragmento=="publicar"){
+            Intent intent = new Intent(this, PublicarVestido.class);
+            startActivity(intent);
         }
-
     }
 
     @Override
@@ -103,6 +106,13 @@ public class Inicio extends AppCompatActivity implements FragmentInicio.DataList
             Fragment ff = (Fragment) fr;
             setFragment(ff, "fragment_inicio");
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentInicio fr = new FragmentInicio();
+        Fragment ff = (Fragment) fr;
+        setFragment(ff, "fragment_inicio");
     }
 }
 
