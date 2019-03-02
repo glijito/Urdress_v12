@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context=".ApiDressWeb.vista.Fragments.FragmentPublicarVestido_1">
+
+      <android.support.constraint.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+          <Button
+              android:id="@+id/misPubli"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              android:background="#7C95AF"
+              android:text="Publicar un Vestido"
+              android:textColor="#FFFFFF"
+              android:textSize="17dp"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <Button
+              android:id="@+id/Cancelar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:background="#7C95AF"
+              android:text="Atrás"
+              android:textColor="#FFFFFF"
+              android:textSize="14dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/misPubli" />
+
+      <Button
+          android:id="@+id/Precio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:background="#7C95AF"
+          android:text="Precio"
+          android:textColor="#FFFFFF"
+          android:textSize="14dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/misPubli" />
+
+      <ImageView
+          android:id="@+id/ImgTituloPubli"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/rectangle_85"
+          android:layout_marginTop="15dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/misPubli"/>
+      <EditText
+          android:id="@+id/EdTitulo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:hint="Título de la publicación"
+          android:textSize="17dp"
+          android:textColorHint="#3A4246"
+          android:textColor="#3A4246"
+          android:ems="14"
+          app:layout_constraintBottom_toBottomOf="@+id/ImgTituloPubli"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/ImgTituloPubli"/>
+      <ImageView
+          android:id="@+id/ImgDescripcion"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/rectangle_86"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ImgTituloPubli"/>
+
+      <EditText
+          android:id="@+id/eTDescripcion"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ems="14"
+          android:gravity="fill_horizontal"
+          android:hint="Describe detalladamente tu vestido y lo que esperas de esta renta…"
+          android:inputType="textMultiLine"
+          android:lines="5"
+          android:textColor="#3A4246"
+          android:textColorHint="#3A4246"
+          android:textSize="17dp"
+          app:layout_constraintBottom_toBottomOf="@+id/ImgDescripcion"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/ImgDescripcion" />
+
+         <ImageView
+             android:id="@+id/ImgTalla"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/rectangle_88"
+             app:layout_constraintStart_toStartOf="@+id/ImgDescripcion"
+             app:layout_constraintTop_toBottomOf="@+id/ImgDescripcion" />
+
+         <TextView
+             android:id="@+id/tVTalla"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="40dp"
+             android:text="Talla:"
+             android:textColor="#000"
+             android:textSize="17dp"
+             app:layout_constraintBottom_toBottomOf="@+id/ImgTalla"
+             app:layout_constraintStart_toStartOf="@+id/ImgTalla"
+             app:layout_constraintTop_toTopOf="@+id/ImgTalla" />
+
+         <EditText
+             android:id="@+id/eTTalla"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="12dp"
+             android:layout_marginBottom="8dp"
+             android:inputType="number"
+             android:textColor="#000"
+             android:ems="2"
+             app:layout_constraintBottom_toBottomOf="@+id/ImgTalla"
+             app:layout_constraintStart_toEndOf="@+id/tVTalla"
+             app:layout_constraintTop_toTopOf="@+id/ImgTalla"/>
+
+         <ImageView
+             android:id="@+id/ImgTipo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/rectangle_88"
+             app:layout_constraintEnd_toEndOf="@+id/ImgDescripcion"
+             app:layout_constraintTop_toBottomOf="@+id/ImgDescripcion" />
+         <TextView
+             android:id="@+id/tVTipo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="40dp"
+             android:text="Tipo:"
+             android:textColor="#000"
+             android:textSize="17dp"
+             app:layout_constraintBottom_toBottomOf="@+id/ImgTipo"
+             app:layout_constraintStart_toStartOf="@+id/ImgTipo"
+             app:layout_constraintTop_toTopOf="@+id/ImgTipo" />
+
+         <EditText
+             android:id="@+id/eTTipo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="12dp"
+             android:layout_marginBottom="8dp"
+             android:inputType="number"
+             android:textColor="#000"
+             android:ems="2"
+             app:layout_constraintBottom_toBottomOf="@+id/ImgTipo"
+             app:layout_constraintStart_toEndOf="@+id/tVTipo"
+             app:layout_constraintTop_toTopOf="@+id/ImgTipo"/>
+
+         <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/group_24001"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.103"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ImgTalla" />
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/group_24001"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.311"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/ImgTalla" />
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/group_24001"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.519"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/ImgTalla" />
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/group_24001"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.727"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/ImgTalla" />
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/group_24001"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.923"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/ImgTalla" />
+   </android.support.constraint.ConstraintLayout>
+
+
+
+</FrameLayout>
