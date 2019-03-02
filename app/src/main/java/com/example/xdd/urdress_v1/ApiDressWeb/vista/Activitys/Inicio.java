@@ -11,12 +11,14 @@ import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentInicio;
 import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentMenu;
 import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentPerfil;
 import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentPublicados;
+import com.example.xdd.urdress_v1.ApiDressWeb.vista.Fragments.FragmentRentados;
 import com.example.xdd.urdress_v1.R;
 
 public class Inicio extends AppCompatActivity implements FragmentInicio.DataListener,
         FragmentMenu.DataListener,
         FragmentPerfil.DataListeners,
-        FragmentPublicados.DataListeres {
+        FragmentPublicados.DataListeres,
+        FragmentRentados.DataListener {
 
     private SharedPreferences prefs;
     private int id;
@@ -62,7 +64,9 @@ public class Inicio extends AppCompatActivity implements FragmentInicio.DataList
             Fragment ff = (Fragment) fr;
             setFragment(ff, "fragment_publicados");
         }else if(fragmento=="Rentados"){
-
+            FragmentRentados fr = new FragmentRentados();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_rentados");
         }else if(fragmento=="Terminos"){
 
         }else if(fragmento=="AcercaDe"){
@@ -85,6 +89,15 @@ public class Inicio extends AppCompatActivity implements FragmentInicio.DataList
 
     @Override
     public void sendPublicados(String fragmento) {
+        if(fragmento=="Atras"){
+            FragmentInicio fr = new FragmentInicio();
+            Fragment ff = (Fragment) fr;
+            setFragment(ff, "fragment_inicio");
+        }
+    }
+
+    @Override
+    public void sendRentados(String fragmento) {
         if(fragmento=="Atras"){
             FragmentInicio fr = new FragmentInicio();
             Fragment ff = (Fragment) fr;

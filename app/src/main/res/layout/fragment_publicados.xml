@@ -23,11 +23,12 @@
             android:id="@+id/atras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:background="#7C95AF"
             android:text="Atrás"
             android:textColor="#FFFFFF"
             android:textSize="14dp"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="@+id/misPubli" />
 
 
     </android.support.constraint.ConstraintLayout>
